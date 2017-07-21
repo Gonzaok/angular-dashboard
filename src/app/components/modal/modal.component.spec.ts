@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { ModalComponent } from './modal.component';
 import { ModalService } from 'app/services/modal.service';
-
+import { WindowService } from "app/services/window.service";
 
 describe('ModalComponent', () => {
   let component: ModalComponent;
@@ -16,7 +16,8 @@ describe('ModalComponent', () => {
         RouterTestingModule
       ],
       providers: [
-        ModalService
+        ModalService,
+        WindowService
       ]
     })
     .compileComponents();

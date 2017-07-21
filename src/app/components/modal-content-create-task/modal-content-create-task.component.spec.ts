@@ -6,9 +6,7 @@ import { ModalContentCreateTaskComponent } from './modal-content-create-task.com
 import { ModalComponent } from 'app/components/modal/modal.component';
 import { ModalService } from 'app/services/modal.service';
 import { TaskService } from 'app/services/task.service';
-
-
-
+import { WindowService } from "app/services/window.service";
 
 describe('ModalContentCreateTaskComponent', () => {
   let component: ModalContentCreateTaskComponent;
@@ -27,7 +25,8 @@ describe('ModalContentCreateTaskComponent', () => {
       providers: [
         ModalComponent,
         ModalService,
-        TaskService
+        TaskService,
+        WindowService
       ]
     })
     .compileComponents();

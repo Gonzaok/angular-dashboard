@@ -11,7 +11,7 @@ import { DraggableDirective } from 'app/directives/draggable/draggable.directive
 import { TruncatePipe } from 'app/pipes/truncate.pipe';
 import { ModalService } from 'app/services/modal.service';
 import { TaskService } from 'app/services/task.service';
-
+import { WindowService } from "app/services/window.service";
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -34,7 +34,8 @@ describe('DashboardComponent', () => {
       ],
       providers: [
         ModalService,
-        TaskService
+        TaskService,
+        WindowService
       ]
     })
     .compileComponents();
