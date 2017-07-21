@@ -1,0 +1,10 @@
+<app-header [logo]="header.logo" [title]="header.title">
+    <div class="log-user" *ngIf="authService.islogged()">
+        <div class="log-name"> Hello {{authService.islogged().name}}</div>
+        <button  (click)="logout()" class="btn-blue"> Logout </button>
+    </div>
+</app-header>
+
+<alert></alert>
+
+<router-outlet></router-outlet>

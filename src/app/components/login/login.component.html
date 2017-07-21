@@ -1,0 +1,7 @@
+<form [formGroup]="loginForm" (ngSubmit)="login($event)">
+      <label for="name"> User Name </label>
+      <input formControlName="name" type="text"
+       placeholder="{{loginForm.get('name').hasError('required') && loginForm.get('name').touched? 'Name Required' : 'Name'}}">
+       
+      <button type="submit" [disabled]="loginForm.invalid" class="btn-blue"> Login </button>
+</form>

@@ -1,0 +1,5 @@
+<div class="alerts">
+    <div (click)="hide(alert)" [@InOut]="'alert.type'" class="box {{ alert.type }}" *ngFor="let alert of alerts">
+        <div class="message">{{ alert.message }} </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+:host {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        padding: 20px 50px;
+        margin: 0 auto;
+        label {
+            margin: 10px 0px;
+        }
+        textarea {
+            height: 150px
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+    }
+}

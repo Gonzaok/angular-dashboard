@@ -1,0 +1,103 @@
+@import "./colors.scss";
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    padding-top: 110px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+// Buttons
+
+button {
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 12px 36px;
+    border: transparent;
+    border-radius: 25px;
+    background-color: white;
+    max-height: 46px;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+.btn-green {
+    border: 2px $green solid;
+    color: #63C431;
+}
+
+.btn-red {
+    border: 2px $red solid;
+    color: #EF2E4E;
+}
+
+.btn-blue {
+    border: 2px $blue solid;
+    color: #2E5084;
+}
+
+.btn-white {
+    background-color: transparent;
+    border: 2px white solid;
+    color: white;
+}
+
+// Inputs
+
+input, button, textarea, select {
+    &:focus {
+        outline-color: transparent;
+        outline-style: none;
+    }
+}
+
+input[type="text"],
+input[type="password"] {
+    border-radius: 100px;
+    border: solid 1px #dae7ed;
+    padding: 10px 20px;
+    &:focus {
+        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+    }
+    &.ng-invalid.ng-touched {
+        background-color: #f8e8eb;
+        border: 1px solid #f68e94;
+        &::-webkit-input-placeholder {
+            color: #eb434d;
+        }
+    }
+}
+
+.select {
+    height: 40px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    border: solid 1px #dae7ed;
+    cursor: pointer;
+    background: url("/assets/images/arrow-down.png") no-repeat 94% 50%;
+    background-size: 14px 8px;
+    overflow: hidden;
+    select {
+        width: 300px;
+        height: 100%;
+        background: transparent;
+        /* mac app fix for transparent background */
+        -webkit-appearance: none;
+        border: none;
+        font-size: 12px;
+        margin-left: 20px;
+        outline: none;
+        border: none;
+    }
+}
+
+textarea {
+    border-radius: 10px;
+    border: solid 1px #dae7ed;
+    padding: 10px;
+    resize: none;
+}

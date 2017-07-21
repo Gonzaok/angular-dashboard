@@ -1,0 +1,8 @@
+<div class="column" elDropTarget (myDrop)="onDrop($event)">
+    <div class="header">
+        {{label}}
+    </div>
+    <div *ngFor="let task of list" [elDraggable]="task.toJSON()" class="draggable">
+        <card-task [task]="task"> </card-task>
+    </div>
+</div>

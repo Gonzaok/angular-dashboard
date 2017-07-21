@@ -1,0 +1,14 @@
+<div class="menu"> 
+    <button (click)="openModal()" class="btn-white"> Create Task </button>
+</div>
+
+<div class="columns">
+    <column-task (columnDrop)="onDrop($event, Status[Status.todo])" label="To Do" [list]="todoList"></column-task>
+    <column-task (columnDrop)="onDrop($event, Status[Status.doing])" label="Doing" [list]="doingList"></column-task>
+    <column-task (columnDrop)="onDrop($event, Status[Status.done])" label="Done" [list]="doneList"></column-task>
+    <column-task (columnDrop)="onDrop($event, Status[Status.ongoing])" label="Ongoing" [list]="ongoingList"></column-task>
+</div>
+
+<modal [modalId]='modalCreateTask' >
+    <modal-content-create-task></modal-content-create-task>
+</modal>

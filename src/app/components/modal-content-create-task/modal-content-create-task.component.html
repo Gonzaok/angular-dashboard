@@ -1,0 +1,18 @@
+<form [formGroup]="taskForm" (ngSubmit)="createTask($event)">
+    <label for="title"> Title </label>
+    <input formControlName="title" type="text"
+      placeholder="{{taskForm.get('title').hasError('required') && taskForm.get('title').touched? 'Required Field' : 'Title'}}">
+    <label for="description"> Description </label>
+    <textarea formControlName="description"></textarea>
+     <label for="userName"> Status </label>
+    <div class="select">
+      <select formControlName="status" >
+        <option *ngFor="let item of statusOptions" [ngValue]="item.value">{{ item.label }}</option>
+      </select>
+    </div>
+
+    <div class="form-footer">
+        <button type="submit" [disabled]="taskForm.invalid" class="btn-blue"> Create </button>
+        <button (click)="cancel($event)" class="btn-green"> Cancel </button>
+    </div>
+</form>

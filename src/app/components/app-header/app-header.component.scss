@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0px 30px;
+    height: 110px;
+    .header-logo {
+        display: flex;
+        align-items: center;
+        .img-logo {
+            height: 45px;
+            margin-right: 20px;
+        }
+        .label-logo {
+            color: #333;
+            font-size: 35px;
+        }
+    }
+    .header-content {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

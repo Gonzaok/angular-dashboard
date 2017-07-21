@@ -1,0 +1,41 @@
+@import "../../../assets/styles/colors.scss";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    background-color: #0079BF;
+    padding: 1% 5%;
+    height: 100%;
+    margin: 0 auto;
+    .menu {
+        padding: 10px;
+    }
+    .columns {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;    
+        column-task {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border: 2px #dae7ed solid;
+            width: 25%;
+            margin: 10px 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }   
+        column-task:nth-child(1) {
+            --card-task-border: 2px solid $green;
+        }
+        column-task:nth-child(2) {
+            --card-task-border: 2px solid $yellow;
+        }
+        column-task:nth-child(3) {
+            --card-task-border: 2px solid $red;
+        }
+        column-task:nth-child(4) {
+            --card-task-border: 2px solid $blue;
+        }
+    }
+    
+}
