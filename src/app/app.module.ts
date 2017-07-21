@@ -31,6 +31,8 @@ import { AlertService } from 'app/services/alert.service';
 import { ModalService } from 'app/services/modal.service';
 import { TaskService } from 'app/services/task.service';
 import { AuthService } from 'app/services/auth.service';
+import { WindowService } from "app/services/window.service";
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { AuthService } from 'app/services/auth.service';
     AlertService,
     ModalService,
     TaskService,
-    AuthService
+    AuthService,
+    WindowService
   ],
   bootstrap: [AppComponent]
 })

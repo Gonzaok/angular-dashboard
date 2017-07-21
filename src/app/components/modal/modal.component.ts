@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { ModalService } from "app/services/modal.service";
+import { WindowService } from "app/services/window.service";
 
 /**
  * Angular component to show and hide templates or component in a Modal
@@ -32,18 +33,19 @@ export class ModalComponent implements OnInit {
   // Constructor
   // -------------------------------------------------------------------------
 
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService, private windowRef: WindowService) { }
 
   ngOnInit() {
     this.modalService.modalActions.subscribe(event => {
       if (event.id === this.modalId) {
         if (event.action === 'open') {
           this.display = 'block';
+           this.windowRef.nativeWindow.document.querySelector('body').classList.add('no-scroll');
         } else if (event.action === 'close') {
           this.display = 'none';
+          this.windowRef.nativeWindow.document.querySelector('body').classList.remove('no-scroll');
         }
       }
-
     })
   }
 

@@ -7,6 +7,10 @@ body {
     height: 100%;
     padding-top: 110px;
     font-family: 'Titillium Web', sans-serif;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 // Buttons

@@ -11,6 +11,10 @@
         font-weight: bold;
         margin-bottom: 10px;
     }
+    .body {
+        overflow: hidden;
+        word-wrap: break-word;
+    }
     &:hover {
         box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
     }
