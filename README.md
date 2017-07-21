@@ -1,6 +1,6 @@
 # AngularDashboard
 
-## Run applicaiont steps:
+## Run application steps:
 
 1) Install angula cli globally with npm: `npm install -g @angular/cli`
 2) Clone repo and install npm package: `npm install`
