@@ -1,5 +1,17 @@
 # AngularDashboard
 
+## Run applicaiont steps:
+
+1) Install angula cli globally with npm: `npm install -g @angular/cli`
+2) Clone repo and install npm package: `npm install`
+3) Run app: `ng serve` and navigate to `http://localhost:4200/`
+4) Have fun :)
+
+
+
+
+## Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
 ## Development server
